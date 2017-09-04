@@ -5,6 +5,8 @@
 	xsi:schemaLocation="http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+     <!-- 该文件是在cxf-core-3.1.12.jar的类路径下的META-INF/cxf/cxf.xml -->
+     <import resource="classpath:META-INF/cxf/cxf.xml"/>
       <bean id="business" class="com.xxx.service.impl.BusinessService"></bean>
-      <jaxws:endpoint id="business" address="/business" implementor="#business"></jaxws:endpoint>
+      <jaxws:endpoint id="businessService" address="/business" implementor="#business"></jaxws:endpoint>
 </beans>
